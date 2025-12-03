@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aBX7lLUfllA=",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Learn-dotnet\\GeminiChat\\Backend\\GeminiChat.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dhruv\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\dhruv\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\dhruv\\.nuget\\packages\\scalar.aspnetcore\\2.11.0\\scalar.aspnetcore.2.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}
