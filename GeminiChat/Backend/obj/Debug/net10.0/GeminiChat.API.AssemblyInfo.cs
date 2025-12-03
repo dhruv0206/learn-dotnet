@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeminiChat.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec58d1615d6c0129afb7dda456b82e191cae13af")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeminiChat.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeminiChat.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

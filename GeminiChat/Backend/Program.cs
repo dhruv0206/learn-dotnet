@@ -32,8 +32,8 @@ app.UseCors("AllowAll");
 app.MapPost("/api/chat", async ([FromBody] ChatRequest request, IHttpClientFactory httpClientFactory) =>
 {
     // Use the API key provided in code or environment variable
-    var apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY") ?? "AIzaSyBkukDO4ih5Lu8f4pzOGYQ8V69usLmPbCo";
-    
+    var apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY") ?? "";
+
     // Only fail if the key is empty or is the generic placeholder
     if (string.IsNullOrWhiteSpace(apiKey) || apiKey == "YOUR_API_KEY_HERE")
     {
@@ -41,7 +41,7 @@ app.MapPost("/api/chat", async ([FromBody] ChatRequest request, IHttpClientFacto
     }
 
     var client = httpClientFactory.CreateClient();
-    
+
     var geminiRequest = new
     {
         contents = new[]
@@ -69,8 +69,8 @@ app.MapPost("/api/chat", async ([FromBody] ChatRequest request, IHttpClientFacto
     }
 
     var responseString = await response.Content.ReadAsStringAsync();
-    
-    try 
+
+    try
     {
         var geminiResponse = JsonSerializer.Deserialize<GeminiResponse>(responseString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         var text = geminiResponse?.Candidates?.FirstOrDefault()?.Content?.Parts?.FirstOrDefault()?.Text ?? "No response from AI.";
